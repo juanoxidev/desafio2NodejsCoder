@@ -6,7 +6,7 @@
   "main": "ProductManager.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "nodemon ProductManager.js"
+    "watch": "node ProductManager.js"
   },
   "author": "",
   "license": "MIT",

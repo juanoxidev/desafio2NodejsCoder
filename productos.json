@@ -1,20 +1,20 @@
 [
-  {
-    "title": "PC",
-    "description": "Pc de escritorio",
-    "price": 200,
-    "thumbnail": "url",
-    "code": "PC123",
-    "stock": 13,
-    "id": 3
-  },
-  {
-    "title": "Short",
-    "description": "S talle xl",
-    "price": 2000,
-    "thumbnail": "url",
-    "code": "S01",
-    "stock": 11,
-    "id": 2
-  }
+	{
+		"title": "Short",
+		"description": "S talle xl",
+		"price": 15,
+		"thumbnail": "url",
+		"code": "S01",
+		"stock": 11,
+		"id": 2
+	},
+	{
+		"title": "PC",
+		"description": "Pc de escritorio",
+		"price": 200,
+		"thumbnail": "url",
+		"code": "PC123",
+		"stock": 13,
+		"id": 3
+	}
 ]

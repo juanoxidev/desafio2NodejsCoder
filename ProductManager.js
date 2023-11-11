@@ -68,6 +68,7 @@ class ProductManager {
   };
 
   updateProduct = async (id, campo) => {
+    this.#validarCampo(campo);
     const productos = await this.getProducts();
     const producto = await this.getProductById(id);
     const index = productos.findIndex((p) => p.id === id);
@@ -81,6 +82,25 @@ class ProductManager {
       throw new Error("No existe producto con ese ID");
     }
   };
+
+  #validarCampo(campo) {
+    const camposPermitidos = [
+      "title",
+      "description",
+      "price",
+      "thumbnail",
+      "code",
+      "stock",
+    ];
+
+    for (const clave in campo) {
+      if (!camposPermitidos.includes(clave)) {
+        throw new Error(
+          `El campo ${clave} no se puede actualizar o no existe en el producto`
+        );
+      }
+    }
+  }
 
   deleteProduct = async (id) => {
     let productos = await this.getProducts();
@@ -126,7 +146,7 @@ await pm.addProduct({
 });
 await pm.deleteProduct(1);
 
-await pm.updateProduct(2, { price: 2000 });
+await pm.updateProduct(2, { id: 2000 });
 
 const producto = await pm.getProductById(3);
 
